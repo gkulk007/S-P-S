@@ -1,7 +1,7 @@
 
 import os
 from pathlib import Path
-
+from django.contrib import messages
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -112,6 +112,21 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
+
+# print(os.environ.get('EMAIL_HOST_USER'))
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# email stuff
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'Your Email'
+EMAIL_USE_TLS = True
+# DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
+EMAIL_PORT = 587
+EMAIL_HOST_PASSWORD = 'Your Password'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
