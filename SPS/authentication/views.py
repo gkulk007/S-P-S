@@ -12,6 +12,7 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.contrib.sites.shortcuts import get_current_site
 from .utils import token_generator
 from django.contrib import auth
+from userprofile.models import Profile
 # Create your views here.
 
 
@@ -67,6 +68,7 @@ class RegisterationView(View):
                 user = User.objects.create(username=username, email=email)
                 user.set_password(password)
                 user.is_active = False
+                Profile.objects.create(user=user, username=username, email=email)
                 user.save()
 
                 uidb64 = urlsafe_base64_encode(force_bytes(user.pk))
@@ -132,7 +134,7 @@ class LoginView(View):
                     auth.login(request, user)
                     messages.success(request, 'Welcome, ' +
                                      user.username + ' You are now logged in')
-                    return redirect('expenses')
+                    return redirect('profile_list')
 
                 messages.error(
                     request, "Account not activated, Please check your Mail")
