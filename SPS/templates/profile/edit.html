@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <form class="row mt-5" action="edit_profile" method="post">
+      {% csrf_token %}
+    <div class="mb-3 col-md-6">
+      <label class="form-label">Username</label>
+      <input type="text" name='username' class="form-control" placeholder="name@example.com" value='{{profile.username}}'>
+    </div>
+    <div class="mb-3 col-md-6">
+      <label class="form-label">Name</label>
+      <input type="text" name='name' class="form-control" placeholder="John Doe" value='{{profile.name}}'>
+    </div>
+    <div class="mb-3 col-md-6">
+      <label class="form-label">Email address</label>
+      <input type="email" name='email' class="form-control" placeholder="name@example.com" value='{{profile.email}}'>
+    </div>
+    <div class="mb-3 col-md-6">
+      <label class="form-label">Phone No</label>
+      <input type="number" name='phone' class="form-control" placeholder="9999999999" value='{{profile.phone_no}}'>
+    </div>
+    <div class="mb-3 col-md-12">
+      <label class="form-label">Summary</label>
+      <textarea class="form-control" name='summary' value='{{profile.summary}}' rows="3">{{profile.summary}}</textarea>
+    </div>
+    <div class="mb-3 col-md-12">
+      <label class="form-label">Education</label>
+      <textarea class="form-control" name='education' value='{{profile.education}}' rows="3">{{profile.education}}</textarea>
+    </div>
+    <div class="mb-3 col-md-12">
+      <label class="form-label">Skills</label>
+      <textarea class="form-control" name='skills' value='{{profile.skills}}' rows="3">{{profile.skills}}</textarea>
+    </div>
+    <div class="mb-3 col-md-12">
+      <label class="form-label">Instagram</label>
+      <input type="url" class="form-control" name='instagram' placeholder="https://instagram.com/username" value='{{profile.instagram}}'>
+    </div>
+    <div class="mb-3 col-md-12">
+      <label class="form-label">Facebook</label>
+      <input type="url" class="form-control" name='facebook' placeholder="facebook profile link" value='{{profile.facebook}}'>
+    </div>
+    <div class="mb-3 col-md-12">
+      <label class="form-label">Twitter</label>
+      <input type="url" class="form-control" name='twitter' placeholder="twitter profile link" value='{{profile.twitter}}'>
+    </div>
+    <div class="mb-3 col-md-12">
+      <label class="form-label">Linkedin</label>
+      <input type="url" class="form-control" name='linkedin' placeholder="linkedin profile link" value='{{profile.linkedin}}'>
+    </div>
+    <div class="mb-3 col-md-12">
+      <label class="form-label">Github</label>
+      <input type="url" class="form-control" name='github' placeholder="github profile link" value='{{profile.github}}'>
+    </div>
+    <div class="mb-3 col-md-12">
+      <label class="form-label">Website</label>
+      <input type="url" class="form-control" name='website' placeholder="website profile link" value='{{profile.website}}'>
+    </div>
+
+    <button type="submit" class='align-items-center col-md-4 btn btn-primary btn-sm mb-3' name="update">Update Profile</button>
+  </form>
+  </div>
+</div>
+
+
+{% endblock %}
