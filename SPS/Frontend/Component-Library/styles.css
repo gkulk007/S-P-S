@@ -32,6 +32,7 @@ hr {
 .container-center {
     width: 70%;
     margin: auto;
+    flex: 1 0 auto;
 }
 
 /** links **/
@@ -126,11 +127,9 @@ hr {
 
 /** footer **/
 .footer {
-    padding: 1rem;
-    padding-bottom: 2rem;
+    flex-shrink: 0;
+    padding: 2rem;
     text-align: center;
-    border-top-right-radius: 1rem;
-    
 }
 .footer-text {
     color: var(--primary-color);
