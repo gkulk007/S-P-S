@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="edit.css">
+    <title>Edit Form</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="title">
+            Edit Profile
+        </div>
+        <form action="#" method="post" class="form">
+            <div class="inputfield">
+                <label>Username</label>
+                <input type="text" class="input" name='username' value='{{profile.username}}' required>
+            </div>
+            <div class="inputfield">
+                <label>Name</label>
+                <input type="text" class="input" name='name' value='{{profile.name}}' required>
+            </div>
+            <div class="inputfield">
+                <label>Email</label>
+                <input type="email" class="input" name='email' value='{{profile.email}}' required>
+            </div>
+            <div class="inputfield">
+                <label>Phone Number</label>
+                <input type="number" class="input" name='phone' value='{{profile.phone_no}}'>
+            </div>
+            <div class="inputfield">
+                <label>Summary</label>
+                <textarea class="textarea" name='summary' value='{{profile.summary}}'></textarea>
+            </div>
+            <div class="inputfield">
+                <label>Education</label>
+                <textarea class="textarea" name='education' value='{{profile.education}}'></textarea>
+            </div>
+            <div class="inputfield">
+                <label>Skills</label>
+                <textarea class="textarea" name='skills' value='{{profile.skills}}'></textarea>
+            </div>
+            <div class="inputfield">
+                <label>Instagram</label>
+                <input type="url" class="input" name='instagram' value='{{profile.instagram}}'>
+            </div>
+            <div class="inputfield">
+                <label>Facebook</label>
+                <input type="url" class="input" name='facebook' value='{{profile.facebook}}'>
+            </div>
+            <div class="inputfield">
+                <label>Twitter</label>
+                <input type="url" class="input" name='twitter' value='{{profile.twitter}}'>
+            </div>
+            <div class="inputfield">
+                <label>Linkedin</label>
+                <input type="url" class="input" name='linkedin' value='{{profile.linkedin}}'>
+            </div>
+            <div class="inputfield">
+                <label>Github</label>
+                <input type="url" class="input" name='github' value='{{profile.github}}'>
+            </div>
+            <div class="inputfield">
+                <label>Website</label>
+                <input type="url" class="input" name='website' value='{{profile.website}}'>
+            </div>
+            <div class="field btn">
+                <div class="btn-layer"></div>
+                <input type="submit" name="update" value="Update Profile">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

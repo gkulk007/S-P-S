@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login Form</title>
+      <link rel="stylesheet" href="login.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title ">
+               Login Form
+            </div>
+         </div>
+            <div class="form-inner">
+               <form method="post" class="login">
+                  <div class="field">
+                     <input type="text" placeholder="Username" name="username" id="usernameField" value="{{fieldValues.username}}" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" placeholder="Password" name="password" id="passwordField" required>
+                  </div>
+             
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Login">
+                  </div>
+                  <div class="signup-link">
+                     Not a member? <a href="register.html">Register now!</a>
+                  </div>
+               </form>
+            </div>
+      </div>
+      <script src="{% static 'js/register.js' %}"></script>
+   </body>
+</html>
