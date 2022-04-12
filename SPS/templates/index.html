@@ -2,16 +2,23 @@
 {% load static %}
 
 {% block content %}
-{% for profile in profiles %}
-<div class="card"><h2>{{profile.name}}</h2>
-    <h2>{{profile.username}}</h2>
-    <h2>{{profile.email}}</h2>
-    <h2>{{profile.phone_no}}</h2>
-    <div class="btn btn-secondary">View More</div>
+<div class="container my-3">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for profile in profiles %}
+    <div class="col">
+      <div class="card" style='width: 300px;'>
+        <h2>{{profile.name}}</h2>
+        <h2>{{profile.username}}</h2>
+        <h2>{{profile.email}}</h2>
+        <h2>{{profile.phone_no}}</h2>
+        <div class="btn btn-secondary">View More</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 </div>
 
 
-{% endfor %}
 <!-- After logout -->
 <div class="btn btn-secondary">Hello Click me</div>
 

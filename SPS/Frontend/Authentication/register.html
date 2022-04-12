@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-   <head>
-      <meta charset="utf-8">
-      <title>Register Form</title>
-      <link rel="stylesheet" href="login.css">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
-   <body>
+{% extends 'base_auth.html' %}
+{% load static %}
+{% block content %}
       <div class="wrapper">
          <div class="title-text">
             <div class="title ">
@@ -24,7 +18,7 @@
                   <div class="field">
                      <input type="password" placeholder="Password" name="password" id="passwordField" required>
                   </div>
-             
+
                   <div class="field btn">
                      <div class="btn-layer"></div>
                      <input type="submit" value="Register">
@@ -33,5 +27,4 @@
             </div>
       </div>
       <script src="{% static 'js/register.js' %}"></script>
-   </body>
-</html>
+   {% endblock %}
